@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+<head>
+	{% block head %}
+		<title>Wiki</title>
+    {% endblock %}
+</head>
+<body>
+	<div class="top-right">
+		<a href={{edit_link}}>{{edit_status}}</a>
+		{{edit_user_sep}}
+		<a href={{hist_link}}>{{hist_status}}</a>
+		&nbsp&nbsp
+		{{wiki_user}}
+		<a href={{login_link}}>{{login_status}}</a>
+		{{login_signup_sep}}
+		<a href={{signup_link}}>{{signup_status}}</a>
+	</div>
+	<div id="content">{% block content %}{% endblock %}</div>
+	</br>
+	<div class="footer">
+		&copy; Copyright 2012 by <a href="http://olivalabs.com">Oliva Labs</a>.
+		{% block footer %}{% endblock %}
+	</div>
+</body>

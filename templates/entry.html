@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="post">
+		<div class="post-heading">
+			<div class="label-name">Topic: {{topic}}</div>
+		</div>
+		<div class="post-content">{{content}}</div>
+	</div>
+{% endblock %}
+{% block footer %}
+	<div class=age>Cached {{cache_time}} seconds ago</div>
+{% endblock %}
+

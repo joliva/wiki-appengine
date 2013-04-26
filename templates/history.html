@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br><br>
+	<table border="0">
+	{% for entry in entries %}
+		<tr>
+			<td width=180px>{{entry.created.ctime()}}</td>
+			<td width=500px>{{entry.content[0:99]}}</td>
+			{% set topic_link = "/wiki" + entry.name + "?id=" %}
+			<td width=40px><a href={{topic_link}}{{entry.key().id()}}>view</a></td>
+			{% set edit_link = "/wiki/_edit" + entry.name + "?id=" %}
+			<td width=40px><a href={{edit_link}}{{entry.key().id()}}>edit</a></td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endblock %}
+
